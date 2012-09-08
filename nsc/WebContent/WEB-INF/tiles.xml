@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 
-<!-- tiles-definitions>
+<tiles-definitions>
 	<definition name="baseLayout" template="/jsp/common/base_layout.jsp">
 		<put-attribute name="title" value="" />
 		<put-attribute name="header" value="/jsp/common/header.jsp" />
@@ -9,76 +9,12 @@
 		<put-attribute name="main" value="" />
 		<put-attribute name="footer" value="/jsp/common/footer.jsp" />
 	</definition>
-	<definition name="loginLayout" template="/jsp/common/login_layout.jsp"
-		extends="baseLayout">
-		<put-attribute name="main" value="" />
+	<definition name="login.tiles" extends="baseLayout">
+	<put-attribute name="title" value="Login" />
+		<put-attribute name="main" value="/login.jsp" />
 	</definition>
-	<definition name="innerBaseLayout" template="/jsp/common/inner_base_layout.jsp"
-		extends="baseLayout">
-		<put-attribute name="title" value="" />
-		<put-attribute name="left_content" value="/jsp/common/left_content.jsp" />
-		<put-attribute name="bottom_content" value="/jsp/common/bottom_content.jsp" />
-		<put-attribute name="main_content" value="" />
+	<definition name="home.tiles" extends="baseLayout">
+	<put-attribute name="title" value="Home" />
+		<put-attribute name="main" value="/home.jsp" />
 	</definition>
-	<definition name="popupLayout" template="/jsp/common/popup_base_layout.jsp"
-		extends="baseLayout">
-		<put-attribute name="popup_content" value="" />
-	</definition>
-	<definition name="success.tiles" extends="baseLayout">
-		<put-attribute name="title" value="Success" />
-		<put-attribute name="main" value="/jsp/success.jsp" />
-	</definition>
-	<definition name="error.tiles" extends="baseLayout">
-		<put-attribute name="title" value="Error" />
-		<put-attribute name="main" value="/jsp/error.jsp" />
-	</definition>
-	<definition name="login.tiles" extends="loginLayout">
-		<put-attribute name="title" value="Login" />
-		<put-attribute name="main" value="/jsp/login.jsp" />
-	</definition>
-	<definition name="forgetPassword.tiles" extends="loginLayout">
-		<put-attribute name="title" value="Forget Password" />
-		<put-attribute name="main" value="/jsp/forget_password.jsp" />
-	</definition>
-	<definition name="home.tiles" extends="innerBaseLayout">
-		<put-attribute name="title" value="Home" />
-		<put-attribute name="main" value="/jsp/home/main.jsp" />
-	</definition>
-	<definition name="modelAndDataDefinition.tiles" extends="innerBaseLayout">
-		<put-attribute name="title" value="Model and Data Definition" />
-		<put-attribute name="main_content"
-			value="/jsp/model_and_data_definition/main.jsp" />
-	</definition>
-	<definition name="derivedVariablesAndDataGeneration.tiles"
-		extends="innerBaseLayout">
-		<put-attribute name="title"
-			value="Derived Variables and Data Generation" />
-		<put-attribute name="main_content"
-			value="/jsp/derived_variables_and_data_generation/main.jsp" />
-	</definition>
-	<definition name="modelDataCharacteristics.tiles" extends="innerBaseLayout">
-		<put-attribute name="title" value="Model Data Characteristics" />
-		<put-attribute name="main_content"
-			value="/jsp/model_data_characteristics/main.jsp" />
-	</definition>
-	<definition name="modelTuningAndRegistration.tiles" extends="innerBaseLayout">
-		<put-attribute name="title" value="Model Tuning and Performance" />
-		<put-attribute name="main_content"
-			value="/jsp/model_tuning_and_registration/main.jsp" />
-	</definition>
-	<definition name="modelDevelopment.tiles" extends="innerBaseLayout">
-		<put-attribute name="title" value="Model Development" />
-		<put-attribute name="main_content" value="/jsp/model_development/main.jsp" />
-	</definition>
-	<definition name="tune.tiles" extends="popupLayout">
-		<put-attribute name="popup_content" value="/jsp/model_tuning_and_registration/tune.jsp" />
-	</definition>
-	<definition name="modelDeployment.tiles" extends="innerBaseLayout">
-		<put-attribute name="title" value="Model Deployment" />
-		<put-attribute name="main_content" value="/jsp/model_deployment/main.jsp" />
-	</definition>
-	<definition name="modelMonitoring.tiles" extends="baseLayout">
-		<put-attribute name="title" value="Model Monitoring" />
-		<put-attribute name="main" value="/jsp/model_monitoring/main.jsp" />
-	</definition>
-</tiles-definitions-->
+</tiles-definitions>

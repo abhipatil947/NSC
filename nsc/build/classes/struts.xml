@@ -14,7 +14,10 @@
 		</result-types>
 
 		<action name="login" class="com.nsc.action.LoginAction">
-			<result name="success">/login.jsp</result>
+			<result name="success" type="tiles">login.tiles</result>
+		</action>
+		<action name="home" class="com.nsc.action.HomeAction">
+			<result name="success" type="tiles">home.tiles</result>
 		</action>
 
 
